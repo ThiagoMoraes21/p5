@@ -32,6 +32,8 @@ function Snake() {
       if(d < 1) {
         this.total = 0;
         this.body = [];
+        this.x = 0;
+        this.y = 0;
       }
     }
   }
@@ -42,6 +44,7 @@ function Snake() {
         this.body[i] = this.body[i + 1];
       }
     }
+
     this.body[this.total - 1] = createVector(this.x, this.y);
     this.x = this.x + this.xspeed * scl;
     this.y = this.y + this.yspeed * scl;

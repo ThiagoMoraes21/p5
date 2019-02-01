@@ -18,6 +18,9 @@ function draw() {
   if(snake.eat(food)) {
     pickLocation();
   }
+  if(snake.death()) {
+    pickLocation();
+  }
 
   fill(255, 0, 100);
   rect(food.x, food.y, scl, scl);
